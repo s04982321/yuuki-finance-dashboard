@@ -24,7 +24,10 @@ st.subheader("データ入力")
 
 type_input = st.selectbox("種類",["収入","支出"])
 date = st.date_input("日付")
-category = st.text_input("カテゴリ")
+category = st.selectbox(
+    "カテゴリ",
+    ["食費","交通費","娯楽","日用品","その他"]
+)
 amount = st.number_input("金額",min_value=0)
 
 if st.button("追加"):
@@ -160,6 +163,7 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
 
 
