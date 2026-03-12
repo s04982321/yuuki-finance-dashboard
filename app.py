@@ -147,7 +147,7 @@ if len(expense_data) > 0:
 # CSVダウンロード
 st.subheader("データダウンロード")
 
-csv = data.to_csv(index=False)
+csv = data.to_csv(index=False).encode("utf-8-sig")
 
 st.download_button(
     label="CSVダウンロード",
@@ -155,4 +155,5 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
