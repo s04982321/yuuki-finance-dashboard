@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 import os
 
-plt.rcParams["font.family"] = "DejaVu Sans"
+matplotlib.rcParams["font.family"] = "Noto Sans CJK JP"
 
 st.title("家計簿アプリ")
 
@@ -152,6 +153,7 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
 
 
