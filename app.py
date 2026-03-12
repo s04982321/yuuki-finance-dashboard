@@ -5,7 +5,6 @@ import matplotlib
 import japanize_matplotlib
 import os
 
-
 if os.path.exists("kakeibo.csv"):
     os.remove("kakeibo.csv")
 
@@ -161,6 +160,7 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
 
 
