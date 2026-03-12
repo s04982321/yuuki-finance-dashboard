@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 import os
+
+matplotlib.rcParams['font.family'] = 'sans-serif'
+matplotlib.rcParams['font.sans-serif'] = ['Yu Gothic']
 
 plt.rcParams["font.family"] = "Meiryo"
 
@@ -94,9 +98,9 @@ if len(expense_data) > 0:
     fig,ax = plt.subplots()
 
     ax.pie(
-        cat_sum,
-        labels=cat_sum.index,
-        autopct="%1.1f%%"
+    cat_sum,
+    labels=cat_sum.index.astype(str),
+    autopct="%1.1f%%"
     )
 
     st.pyplot(fig)
