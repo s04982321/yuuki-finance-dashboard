@@ -70,8 +70,8 @@ if income > 0:
     
 # 今月の収支
 st.subheader("今月の収支")
-
-data["date"] = pd.to_datetime(data["date"])
+if len(data) > 0:
+    data["date"] = pd.to_datetime(data["date"])
 
 today = pd.Timestamp.today()
 this_month = data[
@@ -172,6 +172,7 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
 
 
