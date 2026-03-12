@@ -61,8 +61,10 @@ if st.button("最後のデータを削除"):
 income = data[data["type"]=="収入"]["amount"].sum()
 expense = data[data["type"]=="支出"]["amount"].sum()
 
-st.write("収入合計:",income)
-st.write("支出合計:",expense)
+col1, col2 = st.columns(2)
+
+col1.metric("収入合計", income)
+col2.metric("支出合計", expense)
 
 if income > 0:
     saving_rate = (income-expense)/income*100
@@ -158,5 +160,6 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
 
 
