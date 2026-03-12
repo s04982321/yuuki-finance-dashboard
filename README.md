@@ -21,7 +21,9 @@ Streamlit Cloudで公開
 
 ##
 実行方法
-
+ここをクリック
+https://kakeibo-app2026-ddthqgwhq79tepd5uzl8jw.streamlit.app/
+　もしくは
 1. 必要ライブラリをインストール
 pip install -r requirements.txt
 
