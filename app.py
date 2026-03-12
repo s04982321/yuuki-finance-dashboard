@@ -125,10 +125,10 @@ if len(expense_data) > 0:
 
     if top_ratio > 40:
         st.write(
-            f"{top_category}が支出の{top_ratio:.1f}%を占めています。支出構造を見直すと貯蓄率が改善する可能性があります。"
+            f"{top_category}が支出の{top_ratio:.1f}%を占めています。支出構造を見直すと貯蓄率が改善する可能性があります(>_<)"
         )
     else:
-        st.write("支出バランスは比較的安定しています。")
+        st.write("支出バランスは比較的安定しています(≧▽≦)")
 
 
 # 月別支出
@@ -155,3 +155,4 @@ st.download_button(
     file_name="kakeibo.csv",
     mime="text/csv"
 )
+
